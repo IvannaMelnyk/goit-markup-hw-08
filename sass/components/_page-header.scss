@@ -1,7 +1,8 @@
 // шапка
 .main-nav {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
+  display: block;
 }
 // логотип
 .logo {
@@ -20,7 +21,7 @@
   border-bottom: 1px solid #ececec;
 }
 .site-nav {
-  display: flex;
+  // display: flex;
   margin-left: 85px;
 
   .item + .item {

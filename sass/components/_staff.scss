@@ -1,13 +1,14 @@
 .section.staff {
   background: #f5f4fa;
 }
-.list li {
-  justify-content: space-between;
-}
+// .list li {
+//   justify-content: space-between;
+// }
 .staff-list {
-  display: flex;
-  flex-wrap: nowrap;
-  text-align: center;
+  // display: flex;
+  // flex-wrap: nowrap;
+  // text-align: center;
+  display: block;
 
   .photo {
     margin-bottom: 30px;

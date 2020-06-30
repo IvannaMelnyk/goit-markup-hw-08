@@ -286,10 +286,15 @@ img {
 }
 
 .container {
-  width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 
 .list {
@@ -305,6 +310,12 @@ img {
 
 .section.border {
   border-top: 1px solid #ececec;
+}
+
+@media screen and (min-width: 480px) {
+  .section.border {
+    width: 480px;
+  }
 }
 
 .section-title {
@@ -330,12 +341,7 @@ img {
 }
 
 .main-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: block;
 }
 
 .logo {
@@ -355,9 +361,6 @@ img {
 }
 
 .site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-left: 85px;
 }
 
@@ -450,11 +453,6 @@ footer {
   padding-right: 15px;
   padding-top: 48px;
   padding-bottom: 28px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
 }
 
 .adress-list {
@@ -504,17 +502,7 @@ footer {
 }
 
 .footer-link {
-  margin-left: 94px;
   fill: #ffffff;
-}
-
-.footer-link .list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
 }
 
 .footer-icon {
@@ -542,14 +530,15 @@ footer {
 }
 
 .form-mail {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .mail-input {
   display: inline;
-  min-width: 358px;
+  min-width: 450px;
   min-height: 50px;
   padding-left: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -600,6 +589,10 @@ footer {
 .button-img {
   position: absolute;
   right: 28px;
+}
+
+.list li {
+  margin: 0;
 }
 
 .filter-list {

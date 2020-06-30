@@ -13,6 +13,7 @@ body {
   color: $primaryColor;
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
+ 
  }
 textarea {
   resize: none;
@@ -23,11 +24,16 @@ img {
   height: auto;
 }
 .container {
-  width: 1200px;
+  // width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+
+@media screen and (min-width: 480px) {
+    width: 480px;
+  }
 }
+
 .list {
   list-style: none;
   padding: 0;
@@ -39,6 +45,10 @@ img {
   
   &.border {
   border-top: 1px solid #ececec;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
 }
 }
 .section-title {
