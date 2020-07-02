@@ -1,14 +1,16 @@
 .customer-list {
-  // display: flex;
-  // flex-wrap: nowrap;
-  display: block;
- 
-  .icon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -15px;
+}
+  .customer-list .icon {
   display: flex;
   justify-content: center;
   align-items: center;
+  
   height: 90px;
-  min-width: 170px;
+  min-width: 210px;
   fill: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -20,16 +22,16 @@
   &:focus {
   fill: $accentColor;
   border-color: $accentColor;
-  cursor: pointer;
-}
-}
-}
-.customer-list .item {
-  width: 170px;
-  margin-bottom: 30px;
-  
+  cursor: pointer;}
 
- &:nth-child(6n) {
-  margin-right: 0;
+  @media screen and (max-width: 767px) {
+  align-items: center;
+  margin: 15px;
+  width: calc((100% - 4 * 15px) / 2);
 } 
+@media screen and (min-width: 768px) {
+  min-width: 226px;
 }
+@media screen and (min-width: 1200px) {
+  min-width: 170px;
+}}
