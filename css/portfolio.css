@@ -339,17 +339,13 @@ img {
   }
 }
 
-.section.border {
-  border-top: 1px solid #ececec;
-}
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1199px) {
   .section.border {
-    width: 480px;
+    display: none;
   }
 }
 
-.section-title {
+.section .section-title {
   margin-top: 0;
   margin-bottom: 50px;
   color: #212121;

@@ -1,7 +1,10 @@
 .specialization-list {
-  // display: flex;
-  // flex-wrap: nowrap;
-  
+  display: flex;
+  flex-wrap: nowrap;
+@media screen and (max-width: 1199px) {
+  display: none;
+
+}
   .title {
   position: absolute;
   bottom: 0;
