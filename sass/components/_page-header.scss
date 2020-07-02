@@ -3,7 +3,10 @@
   // display: flex;
   // align-items: center;
   display: block;
-
+  @media screen and (min-width: 480px){
+width: 480px;
+  }
+    
 }
 // логотип
 .logo {
@@ -13,6 +16,9 @@
   line-height: 1.2;
   text-decoration: none;
   
+}
+.header-border {
+border-bottom: 1px solid #ececec;
 }
 .accent {
   color: $accentColor;
@@ -24,20 +30,14 @@
 .site-nav {
   display: block;
   padding: 60px;
-  // display: flex;
-  // margin-left: 85px;
-  // @media screen and (max-width: 767px) {
-  // &.item:not(:last-child) {
-  // margin-bottom: 60px;}
-   .item {
+.item {
+  position: relative;
      text-align: center;
      margin-bottom: 40px;
      &:nth-child(3n) {
-       margin-bottom: 0;
-     }
-   }
-
- }
+       margin-bottom: 0;}
+    }}
+ 
  .site-nav .link {
   position: relative;
   display: inline-block;
@@ -72,21 +72,26 @@
  }
 //  Контакти
  .auth-nav {
-  display: flex;
-  margin-left: auto;
-  .item + .item {
-  margin-left: 30px;
-}
+   padding-bottom: 60px;
+//   .item + .item {
+//   margin-left: 30px;
+// }
   .icon {
   margin-right: 10px;
   fill: currentColor;
   cursor: pointer;
 }
-}
+ .item {
+  text-align: center;
+     margin-bottom: 16px;
+     &:nth-child(2n) {
+       margin-bottom: 0;
+     }
+}}
+
 .auth-nav .link {
   display: inline-flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  
   align-items: center;
 
   color: var(--primary-text-color);
