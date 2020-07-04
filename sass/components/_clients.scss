@@ -3,6 +3,11 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: -15px;
+  
+  @media screen and (min-width: $desktop) {
+   flex-wrap: nowrap;
+  margin: -15px;}
+  
 }
   .customer-list .icon {
   display: flex;
@@ -10,7 +15,8 @@
   align-items: center;
   
   height: 90px;
-  min-width: 210px;
+  // min-width: 210px;
+  width: 100%;
   fill: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -22,17 +28,15 @@
   &:focus {
   fill: $accentColor;
   border-color: $accentColor;
-  cursor: pointer;}
-
+  cursor: pointer;}}
+.customer-list .item {
   @media screen and (max-width: 767px) {
   align-items: center;
   margin: 15px;
   width: calc((100% - 4 * 15px) / 2);
 } 
-@media screen and (min-width: 768px) {
-  min-width: 226px;
+ @media screen and (min-width: 768px) {
   margin: 15px;
+   width: calc((100% - 6 * 15px) / 3);
 }
-@media screen and (min-width: 1200px) {
-  min-width: 170px;
-}}
+}

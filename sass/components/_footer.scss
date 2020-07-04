@@ -10,10 +10,16 @@ padding: 60px 15px;
 
 
  @media screen and (min-width: 480px) {
-   width: 480px;
+   width: 100%;
   // display: flex;
   // flex-wrap: nowrap;
+}
+@media screen and (min-width: $desktop) {
+display: flex;
+flex-wrap: nowrap;
+justify-content: space-between;
 }}
+
 .adress-list {
   text-align: center;
 padding-bottom: 60px;
@@ -79,6 +85,7 @@ padding-bottom: 60px;
   margin-bottom: 60px;
 }
 }
+
 .footer-icon {
 display: flex;
 justify-content: center;
@@ -107,6 +114,10 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .mail-input {
   display: inline;
   min-width: 450px;
+   @media screen and (max-width: 479px) {
+   min-width: 100%;}
+  @media screen and (min-width:1200px) {
+   min-width: 570px;}
   min-height: 50px;
   padding-left: 16px;
 
@@ -124,9 +135,8 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   color: rgba(255, 255, 255, 0.6);
   background: rgba(0, 0, 0, 0);
-  outline: none;
+  outline: none;}
 
-}
 .button-mail {
   text-align: center;
   position: relative;
@@ -156,10 +166,33 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
   right: 28px;
 }
-.list li {
-  margin: 0;
-}
+// .list li {
+//   margin: 0;
+// }
 .mail-field {
   margin-bottom: 20px;
   text-align: center;
+  @media screen and (max-width: 767px) {
+width: 100%;
+
 }
+}
+.position {
+ display: block;
+ text-align: center;
+  @media screen and (min-width: $tablet) {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: space-evenly;}
+}
+// .position-footer {
+//  @media screen and (max-width: 767px) {
+// width: 450px;
+
+// }
+// @media screen and (max-width: 1199px) {
+// min-width: 768px;
+// }
+// }
