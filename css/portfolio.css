@@ -256,6 +256,7 @@ summary {
 }
 
 .main-nav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -299,15 +300,15 @@ summary {
   color: #2196f3;
 }
 
-.main-nav .form-button .icon-cross {
+.main-nav .form-button .icon-menu {
   display: none;
 }
 
-.main-nav .form-button.is-open .icon-cross {
+.main-nav .form-button.is-open .icon-menu {
   display: block;
 }
 
-.main-nav .form-button.is-open .icon-menu {
+.main-nav .form-button.is-open .icon-cross {
   display: none;
 }
 
@@ -317,6 +318,22 @@ summary {
 
 .main-nav .nav.border {
   border-bottom: 1px solid #ececec;
+}
+
+.main-nav .menu-container {
+  background-color: palegoldenrod;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.main-nav .menu-container.is-open {
+  display: block;
 }
 
 .main-nav .site-nav {

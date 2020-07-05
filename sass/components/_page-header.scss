@@ -1,6 +1,9 @@
 // шапка
-
+// .header-full {
+//   position: relative;
+// }
 .main-nav {
+position: relative;
 display: flex;
 flex-wrap: wrap;
 flex-direction: column;
@@ -33,13 +36,13 @@ border-bottom: 1px solid #ececec;
   &:hover {
       color: $accentColor;
   }
-  .icon-cross {
+  .icon-menu {
 display: none;
   }}
-  .form-button.is-open .icon-cross {
+  .form-button.is-open .icon-menu {
     display: block;
   }
- .form-button.is-open .icon-menu {
+ .form-button.is-open .icon-cross {
     display: none;
   } 
 
@@ -51,7 +54,20 @@ display: none;
 .nav.border { 
   border-bottom: 1px solid #ececec;
   }
-
+.menu-container{
+   background-color: palegoldenrod;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  .menu-container.is-open {
+    display: block;
+}
 .site-nav {
   // display: block;
   padding: 60px;
