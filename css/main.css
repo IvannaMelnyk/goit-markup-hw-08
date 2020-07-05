@@ -394,9 +394,7 @@ img {
 }
 
 .main-nav .form-button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
   width: 40px;
   height: 40px;
   margin-right: 0;
@@ -411,6 +409,18 @@ img {
 
 .main-nav .form-button:hover {
   color: #2196f3;
+}
+
+.main-nav .form-button .icon-cross {
+  display: none;
+}
+
+.main-nav .form-button.is-open .icon-cross {
+  display: block;
+}
+
+.main-nav .form-button.is-open .icon-menu {
+  display: none;
 }
 
 .main-nav .accent {
