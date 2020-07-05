@@ -1,7 +1,9 @@
 
+@import "./utils/breakpoints";
 @import "./utils/variables";
 @import "./utils/normalize";
-@import "./components/global";
 @import "./components/page-header";
-@import "./components/footer";
+@import "./components/global";
 @import "./components/portfolio-list";
+@import "./components/form";
+@import "./components/footer";

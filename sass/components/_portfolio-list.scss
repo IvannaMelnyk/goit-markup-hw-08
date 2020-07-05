@@ -2,9 +2,14 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-
   margin-bottom: 50px;
-
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    } 
+  }
+  
   .link {
   display: inline-block;
   border-radius: 4px;
@@ -12,7 +17,7 @@
   min-width: 73px;
   
 
-  background-color: #f5f4fa;
+  // background-color: #f5f4fa;
   color: $secondaryColor;
   border-color: transparent;
 
@@ -30,14 +35,22 @@
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 }
-}
+
 .filter-list li {
   margin-right: 8px;
+  margin-bottom: 15px;
+  &:nth-child(4n),
+  &:nth-child(5n){
+  margin-bottom: 0px;}
+ 
 }
 .portfolio-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   overflow: hidden;
+   @media screen and (max-width: 767px) {
+     flex-wrap: wrap;
+   }
   
   .text {
   position: absolute;

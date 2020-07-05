@@ -321,7 +321,7 @@ img {
   margin: auto;
 }
 
-@media screen and (480px) {
+@media screen and (min-width: 480px) {
   .section {
     width: 480px;
   }
@@ -356,17 +356,30 @@ img {
   text-decoration: none;
 }
 
+.section .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .main-nav {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-@media screen and (min-width: 480px) {
-  .main-nav {
-    width: 480px;
-  }
-}
-
-.logo {
+.main-nav .logo {
   color: #212121;
   font-family: Raleway, sans-serif;
   font-size: 26px;
@@ -374,34 +387,50 @@ img {
   text-decoration: none;
 }
 
-.header-border {
-  border-bottom: 1px solid #ececec;
+@media screen and (max-width: 767px) {
+  .main-nav .header-border {
+    border-bottom: 1px solid #ececec;
+  }
 }
 
-.accent {
+.main-nav .accent {
   color: #2196f3;
 }
 
-.nav.border {
+.main-nav .nav.border {
   border-bottom: 1px solid #ececec;
 }
 
-.site-nav {
-  display: block;
+.main-nav .site-nav {
   padding: 60px;
 }
 
-.site-nav .item {
+@media screen and (min-width: 768px) {
+  .main-nav .site-nav {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.main-nav .site-nav .item {
   position: relative;
   text-align: center;
   margin-bottom: 40px;
 }
 
-.site-nav .item:nth-child(3n) {
+.main-nav .site-nav .item:nth-child(3n) {
   margin-bottom: 0;
 }
 
-.site-nav .link {
+.main-nav .site-nav .link {
   position: relative;
   display: inline-block;
   -webkit-box-align: center;
@@ -418,11 +447,11 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav .link:hover, .site-nav .link:focus, .site-nav .link.current {
+.main-nav .site-nav .link:hover, .main-nav .site-nav .link:focus, .main-nav .site-nav .link.current {
   color: #2196f3;
 }
 
-.site-nav .link.current::after {
+.main-nav .site-nav .link.current::after {
   content: "";
   width: 100%;
   height: 4px;
@@ -434,26 +463,56 @@ img {
   border-radius: 2px;
 }
 
-.auth-nav {
+.main-nav .auth-nav {
   padding-bottom: 60px;
 }
 
-.auth-nav .icon {
+@media screen and (min-width: 768px) {
+  .main-nav .auth-nav {
+    margin: 0;
+    padding: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.main-nav .auth-nav .icon {
   margin-right: 10px;
   fill: currentColor;
   cursor: pointer;
 }
 
-.auth-nav .item {
+.main-nav .auth-nav .item {
   text-align: center;
   margin-bottom: 16px;
 }
 
-.auth-nav .item:nth-child(2n) {
+@media screen and (min-width: 768px) {
+  .main-nav .auth-nav .item {
+    margin-left: 81px;
+    margin-right: 84px;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.main-nav .auth-nav .item:nth-child(2n) {
   margin-bottom: 0;
 }
 
-.auth-nav .link {
+.main-nav .auth-nav .link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -470,7 +529,7 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.auth-nav .link:hover, .auth-nav .link:focus {
+.main-nav .auth-nav .link:hover, .main-nav .auth-nav .link:focus {
   color: #2196f3;
 }
 
@@ -953,6 +1012,10 @@ footer {
   display: block;
   text-align: center;
   margin-bottom: 10px;
+}
+
+.adress-list .accent {
+  color: #2196f3;
 }
 
 .adress-list .title {

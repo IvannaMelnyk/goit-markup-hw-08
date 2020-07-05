@@ -50,11 +50,11 @@
       <div class="container">
         <h1 class="section-title visually-hidden">Портфолио</h1>
         <ul class="filter-list list">
-          <li><button type="button" class="link">Все</button></li>
-          <li><button type="button" class="link">Веб-сайт</button></li>
-          <li><button type="button" class="link">Приложения</button></li>
-          <li><button type="button" class="link">Дизайн</button></li>
-          <li><button type="button" class="link">Маркетинг</button></li>
+          <li class="box-item"><button type="button" class="link">Все</button></li>
+          <li class="box-item"><button type="button" class="link">Веб-сайт</button></li>
+          <li class="box-item"><button type="button" class="link">Приложения</button></li>
+          <li class="box-item"><button type="button" class="link">Дизайн</button></li>
+          <li class="box-item"><button type="button" class="link">Маркетинг</button></li>
         </ul>
         <ul class="portfolio-list list">
           <li class="item">
@@ -218,44 +218,47 @@
   <!--Футер-->
   <footer>
     <div class="container-footer">
-      <div>
-        <ul class="adress-list list">
-          <li>
-            <a href="./index.html" class="logo"><span class="accent">Web</span> Studio</a>
-          </li>
-          <li class="title">г. Киев, пр-т Леси Украинки, 26</li>
-          <li>
-            <a href="mailto:info@example.com" class="link">info@example.com</a>
-          </li>
-          <li>
-            <a href="tel:+380991111111" class="link">+38 099 111 11 11</a>
-          </li>
-        </ul>
+      <div class="position">
+        <div>
+          <ul class="adress-list list">
+            <li>
+              <a href="./index.html" class="logo"><span class="accent">Web</span> Studio</a>
+            </li>
+            <li class="title">г. Киев, пр-т Леси Украинки, 26</li>
+            <li>
+              <a href="mailto:info@example.com" class="link">info@example.com</a>
+            </li>
+            <li>
+              <a href="tel:+380991111111" class="link">+38 099 111 11 11</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-link">
+          <b class="footer-text">Присоединяйтесь</b>
+
+          <ul class="list">
+            <li><a href="" aria-label="Ссылка на instagram" class="footer-icon">
+                <svg width="20" height="20">
+                  <use href="./images/symbol-defs.svg#instagram"></use>
+                </svg></a></li>
+            <li><a href="" aria-label="Ссылка на Twitter" class="footer-icon">
+                <svg width="20" height="20">
+                  <use href="./images/symbol-defs.svg#twitter"></use>
+                </svg></a></li>
+            <li><a href="" aria-label="Ссылка на Facebook" class="footer-icon">
+                <svg width="20" height="20">
+                  <use href="./images/symbol-defs.svg#facebook"></use>
+                </svg></a></li>
+            <li><a href="" aria-label="Ссылка на linkedin" class="footer-icon">
+                <svg width="20" height="20">
+                  <use href="./images/symbol-defs.svg#linkedin"></use>
+                </svg></a>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div class="footer-link">
-        <b class="footer-text">Присоединяйтесь</b>
-
-        <ul class="list">
-          <li><a href="" aria-label="Ссылка на instagram" class="footer-icon">
-              <svg width="20" height="20">
-                <use href="./images/symbol-defs.svg#instagram"></use>
-              </svg></a></li>
-          <li><a href="" aria-label="Ссылка на Twitter" class="footer-icon">
-              <svg width="20" height="20">
-                <use href="./images/symbol-defs.svg#twitter"></use>
-              </svg></a></li>
-          <li><a href="" aria-label="Ссылка на Facebook" class="footer-icon">
-              <svg width="20" height="20">
-                <use href="./images/symbol-defs.svg#facebook"></use>
-              </svg></a></li>
-          <li><a href="" aria-label="Ссылка на linkedin" class="footer-icon">
-              <svg width="20" height="20">
-                <use href="./images/symbol-defs.svg#linkedin"></use>
-              </svg></a>
-          </li>
-        </ul>
-      </div>
       <!-- footer E-mail -->
       <div class="footer-link">
         <b class="footer-text">Подпишитесь на рассылку</b>
@@ -271,11 +274,31 @@
           </button>
         </form>
       </div>
-
-      <!-- <p class="footer-date container">
+    </div>
+    <!-- <p class="footer-date container">
         2020 &#10072; Developed by GoIT Students
       </p> -->
   </footer>
+
+
+
+  <script>
+    (() => {
+      document
+        .querySelector('.js-speaker-form')
+        .addEventListener('submit', e => {
+          e.preventDefault();
+
+          new FormData(e.currentTarget).forEach((value, name) =>
+            console.log(`${name}: ${value}`),
+          );
+
+          e.currentTarget.reset();
+        });
+    })();
+  </script>
+
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
