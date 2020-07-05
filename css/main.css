@@ -703,25 +703,67 @@ img {
   margin-right: 0;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .section.staff {
     background: #f5f4fa;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin: -15px;
   }
 }
 
-.staff-list {
-  display: block;
-  text-align: center;
+@media screen and (min-width: 768px) {
+  .section.staff {
+    width: 100%;
+    margin: -15px;
+  }
 }
 
-.staff-list .photo {
+@media screen and (min-width: 1200px) {
+  .section.staff {
+    width: 100%;
+    margin: -15px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.section.staff .staff-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  margin: -15px;
+}
+
+@media screen and (min-width: 768px) {
+  .section.staff .staff-list {
+    width: calc((100% - 4 * 15) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section.staff .staff-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.section.staff .staff-list .photo {
   margin-bottom: 30px;
 }
 
-.staff-list .title {
+.section.staff .staff-list .title {
   margin-top: 0;
   margin-bottom: 10px;
   color: #212121;
@@ -731,7 +773,7 @@ img {
   text-align: center;
 }
 
-.staff-list .text {
+.section.staff .staff-list .text {
   margin-top: 0;
   margin-bottom: 16px;
   font-weight: 400;
@@ -740,9 +782,8 @@ img {
   text-align: center;
 }
 
-.staff-list .item {
-  width: 100%;
-  margin: auto;
+.section.staff .staff-list .item {
+  margin: 0;
   margin-bottom: 30px;
   background: #ffffff;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -750,15 +791,34 @@ img {
   border-radius: 4px;
 }
 
-.staff-list .item:nth-child(4n) {
-  margin: auto;
+@media screen and (min-width: 768px) {
+  .section.staff .staff-list .item {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 15px;
+  }
 }
 
-.staff-icon li {
+@media screen and (min-width: 768px) {
+  .section.staff .staff-list .item:nth-child(3n), .section.staff .staff-list .item:nth-child(4n) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section.staff .staff-list .item {
+    width: 100%;
+    margin: 0 15px;
+  }
+}
+
+.section.staff .staff-list .staff-icon li {
   display: inline-block;
+  margin: 0;
 }
 
-.team-icon {
+.section.staff .staff-list .team-icon {
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -783,7 +843,7 @@ img {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-icon:hover {
+.section.staff .staff-list .team-icon:hover {
   background-color: #2196f3;
   fill: #ffffff;
 }
