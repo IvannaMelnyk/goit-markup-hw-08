@@ -336,6 +336,8 @@ img {
 @media screen and (min-width: 1200px) {
   .section {
     width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -773,17 +775,20 @@ img {
 }
 
 .item {
-  margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 480px) {
   .item {
-    margin: 15px 0;
+    width: 100%;
+    margin-bottom: 30px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .item:nth-child(4n) {
+    margin-bottom: 0;
   }
 }
 
@@ -801,6 +806,13 @@ img {
 @media screen and (min-width: (max-width: 1199px)) {
   .item:not(:last-child) {
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .item {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
