@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! modern-normalize v0.6.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -373,16 +374,20 @@ img {
   position: relative;
 }
 
+@media screen and (min-width: 768px) {
+  .header-full {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .main-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: block;
 }
 
 @media screen and (min-width: 768px) {
@@ -391,12 +396,23 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-direction: column;
+        flex-direction: column;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .main-nav {
     padding: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -443,7 +459,9 @@ img {
 }
 
 .main-nav .form-button.is-open .icon-menu {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .main-nav .form-button.is-open .icon-cross {
@@ -459,6 +477,13 @@ img {
 }
 
 .main-nav .menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: palegoldenrod;
   padding: 20px;
   text-align: center;
@@ -475,13 +500,18 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (mіт-width: 768px) {
   .main-nav .menu-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    text-align: center;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -512,6 +542,7 @@ img {
 }
 
 .main-nav .site-nav .item {
+  display: block;
   position: relative;
   text-align: center;
   margin-bottom: 40px;
@@ -519,6 +550,12 @@ img {
 
 .main-nav .site-nav .item:nth-child(3n) {
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .main-nav .site-nav .item {
+    margin-bottom: 0;
+  }
 }
 
 .main-nav .site-nav .link {
@@ -556,6 +593,7 @@ img {
 
 .main-nav .auth-nav {
   padding-bottom: 60px;
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -614,12 +652,6 @@ img {
 }
 
 .main-nav .auth-nav .link {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: var(--primary-text-color);
   letter-spacing: 0.02em;
   font-weight: 500;
@@ -630,8 +662,23 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 768px) {
+  .main-nav .auth-nav .link {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .main-nav .auth-nav .link:hover, .main-nav .auth-nav .link:focus {
   color: #2196f3;
+}
+
+.auth-nav .list {
+  margin-bottom: 0;
 }
 
 .hero {
@@ -1093,6 +1140,15 @@ footer {
 @media screen and (min-width: 480px) {
   .container-footer {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -1103,6 +1159,10 @@ footer {
     display: flex;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -1168,13 +1228,18 @@ footer {
 
 .footer-text {
   display: block;
-  text-align: center;
   margin-bottom: 21px;
   color: #ffffff;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-text {
+    text-align: center;
+  }
 }
 
 .footer-link {
@@ -1220,6 +1285,14 @@ footer {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .form-mail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .mail-input {
   display: inline;
   min-width: 450px;
@@ -1244,15 +1317,9 @@ footer {
   outline: none;
 }
 
-@media screen and (max-width: 479px) {
-  .mail-input {
-    min-width: 100%;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .mail-input {
-    min-width: 570px;
+    min-width: 358px;
   }
 }
 
@@ -1295,6 +1362,13 @@ footer {
 @media screen and (max-width: 767px) {
   .mail-field {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mail-field {
+    margin: 0;
+    margin-right: 12px;
   }
 }
 
